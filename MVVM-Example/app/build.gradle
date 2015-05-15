@@ -49,8 +49,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-}
 
+    dexOptions {
+        incremental false
+        preDexLibraries false
+        javaMaxHeapSize "1538M"
+    }
+}
 dependencies {
 
     // Android
