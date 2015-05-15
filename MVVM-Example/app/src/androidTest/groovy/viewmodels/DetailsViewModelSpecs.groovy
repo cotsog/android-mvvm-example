@@ -7,12 +7,11 @@ import de.rheinfabrik.mvvm_example.controller.DetailsResultController
 import de.rheinfabrik.mvvm_example.network.models.DetailsResult
 import de.rheinfabrik.mvvm_example.network.models.SearchResult
 import de.rheinfabrik.mvvm_example.viewmodels.DetailsViewModel
-import rx.Observable
 import spock.lang.Title
-import utils.spock.WithTestContext
+import testutils.spock.WithTestContext
 
-import static utils.assets.AssetNames.DETAILS_RESULT
-import static utils.assets.AssetReader.readJSON
+import static testutils.assets.AssetNames.DETAILS_RESULT
+import static testutils.assets.AssetReader.readJSON
 
 @Title("titleSubject")
 class DetailsViewModelTitleSubjectSpecs extends AndroidSpecification {

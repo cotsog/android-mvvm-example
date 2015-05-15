@@ -1,4 +1,4 @@
-package utils.retrofit;
+package testutils.retrofit;
 
 import java.util.concurrent.Executor;
 

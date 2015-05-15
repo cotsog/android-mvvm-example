@@ -1,4 +1,4 @@
-package utils.spock;
+package testutils.spock;
 
 import android.support.test.InstrumentationRegistry;
 

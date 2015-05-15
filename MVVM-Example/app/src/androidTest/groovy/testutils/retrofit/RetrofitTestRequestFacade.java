@@ -1,4 +1,4 @@
-package utils.retrofit;
+package testutils.retrofit;
 
 import java.lang.Object;import java.lang.Override;import java.lang.String;import java.util.ArrayList;
 import java.util.List;
@@ -29,9 +29,9 @@ public class RetrofitTestRequestFacade implements RequestInterceptor.RequestFaca
 
     // Members
 
-    private List<Header> mHeaders = new ArrayList<>();
-    private List<Param> mPathParams = new ArrayList<>();
-    private List<Param> mQueryParams = new ArrayList<>();
+    private List<Header> mHeaders = new ArrayList<Header>();
+    private List<Param> mPathParams = new ArrayList<Param>();
+    private List<Param> mQueryParams = new ArrayList<Param>();
 
     // Public API
 

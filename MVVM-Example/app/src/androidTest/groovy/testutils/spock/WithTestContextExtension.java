@@ -1,4 +1,4 @@
-package utils.spock;
+package testutils.spock;
 
 import org.spockframework.runtime.extension.AbstractAnnotationDrivenExtension;
 import org.spockframework.runtime.model.FieldInfo;

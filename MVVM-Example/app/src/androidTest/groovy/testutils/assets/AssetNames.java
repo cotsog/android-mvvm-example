@@ -1,4 +1,4 @@
-package utils.assets;
+package testutils.assets;
 
 public class AssetNames {
 

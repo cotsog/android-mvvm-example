@@ -9,12 +9,12 @@ import de.rheinfabrik.mvvm_example.network.models.SearchResult
 import retrofit.client.Response
 import retrofit.mime.TypedString
 import spock.lang.Title
-import utils.assets.AssetNames
-import utils.assets.AssetReader
-import utils.retrofit.RetrofitTestClient
-import utils.spock.WithTestContext
+import testutils.assets.AssetNames
+import testutils.assets.AssetReader
+import testutils.retrofit.RetrofitTestClient
+import testutils.spock.WithTestContext
 
-import static utils.assets.AssetNames.SEARCH_RESULTS_RESPONSE
+import static testutils.assets.AssetNames.SEARCH_RESULTS_RESPONSE
 
 @Title("getSearchResults()")
 class ApiFactoryGetSearchResultsSpec extends AndroidSpecification {

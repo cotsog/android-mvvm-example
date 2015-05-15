@@ -7,9 +7,9 @@ import com.google.gson.GsonBuilder
 import de.rheinfabrik.mvvm_example.network.deserializer.SearchResultsDeserializer
 import de.rheinfabrik.mvvm_example.network.models.SearchResult
 import spock.lang.Title
-import utils.assets.AssetNames
-import utils.assets.AssetReader
-import utils.spock.WithTestContext
+import testutils.assets.AssetNames
+import testutils.assets.AssetReader
+import testutils.spock.WithTestContext
 
 @Title("SearchResultsDeserializer parsing")
 class SearchResultsDeserializerSpecs extends AndroidSpecification {

@@ -5,10 +5,10 @@ import com.andrewreitz.spock.android.AndroidSpecification
 import com.google.gson.Gson
 import de.rheinfabrik.mvvm_example.network.models.DetailsResult
 import spock.lang.Title
-import utils.spock.WithTestContext
+import testutils.spock.WithTestContext
 
-import static utils.assets.AssetNames.DETAILS_RESULT
-import static utils.assets.AssetReader.readJSON
+import static testutils.assets.AssetNames.DETAILS_RESULT
+import static testutils.assets.AssetReader.readJSON
 
 @Title("Mapping")
 class DetailsResultMappingSpecs extends AndroidSpecification {
