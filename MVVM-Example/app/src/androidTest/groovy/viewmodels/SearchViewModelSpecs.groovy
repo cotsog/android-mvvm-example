@@ -12,6 +12,8 @@ import testutils.assets.AssetNames
 import testutils.assets.AssetReader
 import testutils.spock.WithTestContext
 
+import static rx.Observable.just
+
 @Title("onSearchResultsReceivedSubject")
 class SearchViewModelOnSearchResultsReceivedSpecs extends AndroidSpecification {
 
@@ -32,7 +34,7 @@ class SearchViewModelOnSearchResultsReceivedSpecs extends AndroidSpecification {
 
         and: "A fake search controller"
         SearchResultController controller = Mock(SearchResultController)
-        controller.getSearchResults("frozen") >> Observable.just(searchResults)
+        controller.getSearchResults("frozen") >> just(searchResults)
 
         and: "A view model with that controller"
         SearchViewModel viewModel = new SearchViewModel(controller)

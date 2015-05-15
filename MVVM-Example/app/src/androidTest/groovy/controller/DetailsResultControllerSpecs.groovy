@@ -10,6 +10,8 @@ import spock.lang.Specification
 import spock.lang.Title
 import testutils.spock.WithTestContext
 
+import static rx.Observable.just
+import static rx.Observable.error
 import static testutils.assets.AssetNames.DETAILS_RESULT
 import static testutils.assets.AssetReader.readJSON
 
@@ -30,7 +32,7 @@ class DetailsResultControllerGetDetailsSpecs extends Specification {
 
         and: "A fake api service emitting the detail result"
             OMDBApiService service = Mock(OMDBApiService)
-            service.getDetails(_) >> Observable.just(new Gson().fromJson(json, DetailsResult.class))
+            service.getDetails(_) >> just(new Gson().fromJson(json, DetailsResult.class))
 
         and: "A details result controller with that service"
             DetailsResultController controller = new DetailsResultController(service)
@@ -49,7 +51,7 @@ class DetailsResultControllerGetDetailsSpecs extends Specification {
 
         given: "A mocked api"
             OMDBApiService api = Mock(OMDBApiService)
-            api.getSearchResults(_) >> Observable.error(new Throwable())
+            api.getSearchResults(_) >> error(new Throwable())
 
         and: "A search result controller with that service"
             DetailsResultController controller = new DetailsResultController(api)

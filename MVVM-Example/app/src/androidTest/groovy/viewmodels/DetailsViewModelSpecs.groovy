@@ -10,6 +10,7 @@ import de.rheinfabrik.mvvm_example.viewmodels.DetailsViewModel
 import spock.lang.Title
 import testutils.spock.WithTestContext
 
+import static rx.Observable.just
 import static testutils.assets.AssetNames.DETAILS_RESULT
 import static testutils.assets.AssetReader.readJSON
 
@@ -59,7 +60,7 @@ class DetailsViewModelPlotSubjectSpecs extends AndroidSpecification {
 
         and: "A fake details controller"
             DetailsResultController controller = Mock(DetailsResultController)
-            controller.getDetails(searchResult) >> Observable.just(detailsResult)
+            controller.getDetails(searchResult) >> just(detailsResult)
 
         and: "A view model with that controller"
             DetailsViewModel viewModel = new DetailsViewModel(controller)
@@ -99,7 +100,7 @@ class DetailsViewModelPosterUrlSubjectSpecs extends AndroidSpecification {
 
         and: "A fake details controller"
             DetailsResultController controller = Mock(DetailsResultController)
-            controller.getDetails(searchResult) >> Observable.just(detailsResult)
+            controller.getDetails(searchResult) >> just(detailsResult)
 
         and: "A view model with that controller"
             DetailsViewModel viewModel = new DetailsViewModel(controller)

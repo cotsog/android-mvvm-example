@@ -10,6 +10,8 @@ import spock.lang.Specification
 import spock.lang.Title
 import testutils.spock.WithTestContext
 
+import static rx.Observable.error
+import static rx.Observable.just
 import static testutils.assets.AssetNames.SEARCH_RESULTS_RESPONSE
 import static testutils.assets.AssetReader.readJSON
 
@@ -27,7 +29,7 @@ class SearchResultControllerGetSearchResultsSpecs extends Specification {
 
         given: "A fake api service emitting null"
             OMDBApiService service = Mock(OMDBApiService)
-            service.getSearchResults("frozen") >> Observable.just(null)
+            service.getSearchResults("frozen") >> just(null)
 
         and: "A search result controller with that service"
             SearchResultController controller = new SearchResultController(service)
@@ -50,7 +52,7 @@ class SearchResultControllerGetSearchResultsSpecs extends Specification {
 
         and: "A fake api service emitting the results"
             OMDBApiService service = Mock(OMDBApiService)
-            service.getSearchResults("frozen") >> Observable.just(searchResults)
+            service.getSearchResults("frozen") >> just(searchResults)
 
         and: "A search result controller with that service"
             SearchResultController controller = new SearchResultController(service)
@@ -81,7 +83,7 @@ class SearchResultControllerGetSearchResultsSpecs extends Specification {
 
         given: "A mocked api"
             OMDBApiService api = Mock(OMDBApiService)
-            api.getSearchResults("frozen") >> Observable.error(new Throwable())
+            api.getSearchResults("frozen") >> error(new Throwable())
 
         and: "A search result controller with that service"
             SearchResultController controller = new SearchResultController(api)
