@@ -6,6 +6,8 @@ machine:
   java:
     version: oraclejdk8
 
+  environment:
+    ADB_INSTALL_TIMEOUT: 16
 
 dependencies:
     override:
@@ -20,4 +22,4 @@ test:
     # wait for it to have booted
     - circle-android wait-for-boot
     # run tests  against the emulator.
-    - ./gradlew connectedCheck --stacktrace
+    - ./gradlew clean connectedCheck --stacktrace
