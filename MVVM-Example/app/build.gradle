@@ -50,11 +50,11 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    dexOptions {
-        incremental false
-        preDexLibraries false
-        javaMaxHeapSize "1538M"
-    }
+//    dexOptions {
+//        incremental false
+//        preDexLibraries false
+//        javaMaxHeapSize "1538M"
+//    }
 }
 dependencies {
 
