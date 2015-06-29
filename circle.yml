@@ -4,6 +4,8 @@ general:
       - /home/ubuntu/MVVM-Example/app/build/outputs/reports/androidTests/connected
 
 machine:
+  environment:
+    JAVA_OPTS: "-Xms256m -Xmx512m"
   java:
     version: oraclejdk8
 
