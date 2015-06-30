@@ -9,9 +9,7 @@ android:
     - build-tools-21.1.2
     - android-22
     - sys-img-armeabi-v7a-android-22
-    - extra-google-m2repository
-    - extra-android-m2repository
-    - extra-android-support
+    - extra
 
 # Emulator Management: Create, Start and Wait
 before_script:
@@ -21,4 +19,3 @@ before_script:
   - adb shell input keyevent 82 &
 
 script: cd MVVM-Example && ./gradlew app:connectAndroidTest --info
-
