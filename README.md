@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.org/AHarazim/android-mvvm-example.svg?branch=devTravisCi)](https://travis-ci.org/AHarazim/android-mvvm-example)
+
 # MVVM Example
 
 An example Application showing how to use MVVM (Model View ViewModel) on Android.
