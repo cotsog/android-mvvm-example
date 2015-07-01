@@ -1,6 +1,6 @@
 package utils.retrofit;
 
-import java.lang.Object;import java.lang.Override;import java.lang.String;import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit.RequestInterceptor;
@@ -23,15 +23,15 @@ public class RetrofitTestRequestFacade implements RequestInterceptor.RequestFaca
 
         @Override
         public boolean equals(Object o) {
-            return ((Param)o).name.equals(name) && ((Param)o).value.equals(value);
+            return ((Param) o).name.equals(name) && ((Param) o).value.equals(value);
         }
     }
 
     // Members
 
-    private List<Header> mHeaders = new ArrayList<>();
-    private List<Param> mPathParams = new ArrayList<>();
-    private List<Param> mQueryParams = new ArrayList<>();
+    private List<Header> mHeaders = new ArrayList<Header>();
+    private List<Param> mPathParams = new ArrayList<Param>();
+    private List<Param> mQueryParams = new ArrayList<Param>();
 
     // Public API
 
