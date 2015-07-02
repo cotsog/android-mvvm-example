@@ -12,6 +12,7 @@ android:
     - android-22
     - sys-img-armeabi-v7a-android-22
     - extra
+    - extra-android-support
 
 # Emulator Management: Create, Start and Wait
 before_script:
